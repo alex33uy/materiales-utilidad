@@ -1,0 +1,103 @@
+* {
+    font-family: 'Macondo', cursive;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.nav__responsive-ul {
+    display: none;
+}
+
+.nav {
+    background: slateblue;
+}
+
+.nav__li {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+}
+
+
+.nav__li:hover > a {
+    color: #999;
+}
+
+
+.nav__li:hover {
+    color: #999;
+}
+
+.nav__li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__li i {
+    width: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.nav__responsive-button-container {
+    position: absolute;
+    font-size: 25px;
+    width: 100%;
+    background-color: slateblue;
+    margin-top: -60px;
+    z-index: 100;
+}
+
+.nav_responsive_button {
+    padding: 6px 20px;
+    text-align: right;
+    width: 100%;
+}
+
+/*se usa esto para cuando se cambie a una definicion de dispositivo mas pequeña,
+se adapte generando un menu responsive*/
+@media only screen and (max-width: 500px) {
+    .nav__ul {
+        display: none;
+    }
+    .nav__responsive-ul {
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin-top: 37px;
+        padding-top: 27px;
+        height: 37px;
+    }
+    .nav {
+        height: 37px;
+        width: 100%;
+    }
+    .nav__responsive-li {
+        width: 100%;
+        padding: 9px 20px;
+    }
+    .nav__responsive-li  i {
+        box-sizing: border-box;
+        text-align: right;
+        margin-right: 5px;
+        width: 30px;
+        color: #ddd;
+    }
+    .nav__responsive-li  a {
+        color: #ddd;
+        text-decoration: none;
+    }
+    .nav_li_container {
+        position: relative;
+        top: -1000px;
+        height: calc(100vh - 64px);
+        background-color: #26a;
+        transition: all 1s;
+        z-index: 1;
+        width: 80%;
+        padding-top: 27px;
+    }
+    .nav__responsive-ul:hover > .nav_li_container {
+        top: -27px;
+    }
+}
